@@ -1,4 +1,4 @@
-# EnforcerException
+# Enforcer Exception
 
 Generate detailed reports about what problems exist and where. Take this example.
 
