@@ -3,7 +3,7 @@
 Generate detailed reports about what problems exist and where. Take this example.
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const exception = new Exception('Header 1')
 const subException = exception.at('one').at('two')
@@ -24,7 +24,7 @@ console.log(exception)
 #### Create an EnforcerException Instance
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('Header 1')
 ```
 
@@ -33,7 +33,7 @@ const exception = new Exception('Header 1')
 Use the [`EnforcerException.prototype.at`](#enforcerexceptionprototypeat) function to create a child EnforcerException instance.
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('Header 1')
 
 const subPathException = exception.at('some path')
@@ -52,7 +52,7 @@ This method for creating a child exception does not indicate a new path, but rat
 Use [`EnforcerException.prototype.nest`](#enforcerexceptionprototypenest).
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('There was an error')
 
 const subException = exception.nest('Could not do action X')
@@ -93,7 +93,7 @@ console.log(exception)
 The number of *messages* added to an EnforcerException, including those added to any child EnforcerException instances.
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const parent = new Exception('Header 1')
 parent.message('Parent message')
@@ -110,7 +110,7 @@ console.log(child.count)  // 1
 Whether an EnforcerException instance has any messages or not.
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const exception = new Exception('Header 1')
 console.log(exception.hasException) // false
@@ -130,7 +130,7 @@ Use this method to create a child exception that indicates a followed path.
 **Returns:** The child EnforcerException instance
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('Header 1')
 
 const subPathException = exception.at('some path')
@@ -153,7 +153,7 @@ Several properties are cached when creating, modifying, and reading EnforcerExce
 **Returns:** The EnforcerException instance who's cache was just cleared
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('There was an error')
 exception.clearCache()
 ```
@@ -169,7 +169,7 @@ This method for creating a child exception does not indicate a new path, but rat
 **Returns:** The child EnforcerException instance
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 const exception = new Exception('There was an error')
 
 const subException = exception.nest('Could not do action X')
@@ -194,7 +194,7 @@ Copy the child EnforcerInstances and messages from one EnforcerInstance into ano
 **Returns:** The EnforcerException instance that was copied into
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const exceptionA = new Exception('Header A')
 exceptionA.message('Message a')
@@ -221,7 +221,7 @@ Add a message to the EnforcerException instance. Once a message is added then th
 **Returns:** The EnforcerException instance that the message was added to
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const exception = new Exception('Header 1')
 exception.message('Message 1')
@@ -242,7 +242,7 @@ This method can be used to add a message (`string`) or an EnforcerInstance objec
 **Returns:** The EnforcerException instance that the value was added to
 
 ```js
-const { Exception } = require('openapi-enforcer')
+const { Exception } = require('enforcer-exception')
 
 const child = new Exception('Header 2')
 child.message('Message 2')
