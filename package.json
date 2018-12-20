@@ -1,0 +1,30 @@
+{
+  "name": "enforcer-exception",
+  "version": "1.0.0",
+  "description": "Generate detailed reports about what problems exist and where",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byu-oit/node-enforcer-exception.git"
+  },
+  "keywords": [
+    "exception",
+    "error"
+  ],
+  "author": "James Speirs <james.speirs@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/byu-oit/node-enforcer-exception/issues"
+  },
+  "homepage": "https://github.com/byu-oit/node-enforcer-exception#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
